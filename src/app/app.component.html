@@ -91,8 +91,8 @@
     </div>
     <div class="row">
       <div class="col-lg-12">
-        <ul class="timeline" *ngFor="let resume of resumes">
-          <li>
+        <ul class="timeline" *ngFor="let resume of resumes; odd as odd;">
+          <li [ngClass]="{ 'timeline-inverted': odd }">
             <div class="timeline-image">
               <img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="">
             </div>
