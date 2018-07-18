@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
   }
 
   loadData() {
-    this.siteLoading = true
+    this.siteLoading = true;
     this._service.getAllData().subscribe(data => {
       this.user = data[0];
       this.projects = data[1];
