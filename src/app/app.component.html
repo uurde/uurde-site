@@ -49,11 +49,11 @@
     </div>
     <div class="row">
       <div class="col-sm-4">
-        <div class="team-member">
-          <img src="http://uur-api-dev.azurewebsites.net/{{user.userPhotoPath}}" alt="">
+        <div>
+          <img src="http://uurde.ugurdegirmenci.net/{{user.userPhotoPath}}" height="350px;" alt="">
           <br>
           <br>
-          <a target="_blank" href="http://uur-api-dev.azurewebsites.net/{{user.userCvPath}}"><button class="btn btn-primary text-uppercase" type="button">Download CV</button></a>
+          <a target="_blank" href="http://uurde.ugurdegirmenci.net/{{user.userCvPath}}"><button class="btn btn-primary text-uppercase" type="button">Download CV</button></a>
         </div>
       </div>
       <div class="col-sm-8">
@@ -74,7 +74,7 @@
     </div>
     <div class="row text-center">
       <div class="col-md-4" *ngFor="let skill of skills">
-        <img src="http://uur-api-dev.azurewebsites.net/{{skill.skillLogoPath}}" width="200px;">
+        <img src="http://uurde.ugurdegirmenci.net/{{skill.skillLogoPath}}" width="200px;">
       </div>
     </div>
   </div>
@@ -132,7 +132,7 @@
               <i class="fa fa-plus fa-3x"></i>
             </div>
           </div>
-          <img style="margin: auto; display: block;" src="http://uur-api-dev.azurewebsites.net/{{project.projectImagePath}}" width="150px;" height="150px;" alt="">
+          <img style="margin: auto; display: block;" src="http://uurde.ugurdegirmenci.net/{{project.projectImagePath}}" width="150px;" height="150px;" alt="">
         </a>
         <div class="portfolio-caption">
           <h5>{{project.projectName}}</h5>
@@ -236,7 +236,7 @@
               <!-- Project Details Go Here -->
               <h2 class="text-uppercase">{{project.projectName}}</h2>
               <p class="item-intro text-muted">{{project.projectTypeName}}</p>
-              <img style="display: block; margin-left: auto; margin-right: auto; width: 150px;" src="https://uur-api-dev.azurewebsites.net/{{project.projectImagePath}}">
+              <img style="display: block; margin-left: auto; margin-right: auto; width: 150px;" src="http://uurde.ugurdegirmenci.net/{{project.projectImagePath}}">
               <div [innerHTML]="project.projectDescription"></div>
               <br>
               <ul class="list-inline">
