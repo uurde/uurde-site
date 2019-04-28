@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
   constructor(private _service: MainService, private _contactService: ContactService, private _projectService: ProjectService) { }
 
   ngOnInit() {
+    this.siteLoading = true;
     this.loadData();
   }
 

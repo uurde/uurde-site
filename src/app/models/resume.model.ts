@@ -7,4 +7,5 @@ export class ResumeModel extends BaseModel{
     resumeDescription: string;
     startDate: Date;
     endDate: Date;
+    companyLogoPath: string;
 }
