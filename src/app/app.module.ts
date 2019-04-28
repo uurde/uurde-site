@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-//import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 //Services
 import { AboutService } from './services/about.service';
@@ -24,7 +24,8 @@ import { MainService } from './services/main.service';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxSpinnerModule
   ],
   providers: [
     AboutService,

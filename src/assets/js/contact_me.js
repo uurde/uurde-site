@@ -19,7 +19,7 @@ $(function () {
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
-        url: "http://uur-api-dev.azurewebsites.net/api/contacts",
+        url: "http://uurde.ugurdegirmenci.net/api/contacts",
         headers: {
           "Authorization": "511d9200e32268e6bc1bb9bd3332ca8d01effb5287c2e315ec2e356ca98efe6a"
         },

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MainService } from './services/main.service';
 import { ContactService } from './services/contact.service';
 import { ProjectService } from './services/projects.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +25,7 @@ export class AppComponent implements OnInit {
 
   today: number = Date.now();
 
-  constructor(private _service: MainService, private _contactService: ContactService, private _projectService: ProjectService) { }
+  constructor(private _service: MainService, private _contactService: ContactService, private _projectService: ProjectService, private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
     this.siteLoading = true;
@@ -32,19 +33,27 @@ export class AppComponent implements OnInit {
   }
 
   loadData() {
-    this.siteLoading = true;
     this._service.getAllData().subscribe(data => {
       this.user = data[0];
       this.projects = data[1];
       this.resumes = data[2];
       this.skills = data[3];
+      setTimeout(() => {
+        /** spinner ends after 5 seconds */
+        this.siteLoading = false;
+    }, 5000);
     },
       null,
-      () => { this.siteLoading = false; });
+      () => {  });
   }
 
-  onSubmit() {
+  save() {
+    this.siteLoading = true;
     this._contactService.insertContact(this.contact);
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.siteLoading = false;
+  }, 5000);
   }
 
   selectProject(project) {
